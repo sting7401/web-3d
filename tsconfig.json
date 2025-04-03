@@ -1,5 +1,94 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "compilerOptions": {
+    "module": "es2020",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "target": "ESNEXT",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "allowJs": true,
+    "checkJs": true,
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "outDir": "./public",
+    "baseUrl": ".",
+    "paths": {
+      "$/*": [
+        "./src/*"
+      ],
+      "$lib/*": [
+        "./src/lib/*"
+      ],
+      "$images/*": [
+        "./static/images/*"
+      ],
+      "$css/*": [
+        "./src/lib/css/*"
+      ],
+      "$common/*": [
+        "./src/lib/js/common/*"
+      ],
+      "$components/*": [
+        "./src/lib/components/*"
+      ],
+      "$state/*": [
+        "./src/lib/state/*"
+      ],
+      "$store/*": [
+        "./src/lib/store/*"
+      ],
+      "$event/*": [
+        "./src/lib/event/*"
+      ],
+      "$events/*": [
+        "./src/lib/events/*"
+      ],
+      "$utils/*": [
+        "./src/lib/utils/*"
+      ],
+      "$types/*": [
+        "./src/lib/types/*"
+      ],
+      "$json/*": [
+        "./src/lib/json/*"
+      ],
+      "$html/*": [
+        "./public/html/*"
+      ],
+      "$astro/*": [
+        "./astro/*"
+      ],
+      "$layouts/*": [
+        "./src/layouts/*"
+      ],
+      "$pages/*": [
+        "./src/pages/*"
+      ],
+      "$publish/*": [
+        "./publish/*"
+      ]
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
+  },
+  "include": [
+    "src",
+    "src/**/*.js",
+    "src/**/*.svelte",
+    "src/**/*.jsx",
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.html,"
+  ]
 }
