@@ -27,41 +27,41 @@
       "$/*": [
         "./src/*"
       ],
-      "$lib/*": [
-        "./src/lib/*"
+      "$*": [
+        "./src/*"
       ],
       "$images/*": [
         "./static/images/*"
       ],
       "$css/*": [
-        "./src/lib/css/*"
+        "./src/css/*"
       ],
       "$common/*": [
-        "./src/lib/js/common/*"
+        "./src/js/common/*"
       ],
       "$components/*": [
-        "./src/lib/components/*"
+        "./src/components/*"
       ],
       "$state/*": [
-        "./src/lib/state/*"
+        "./src/state/*"
       ],
       "$store/*": [
-        "./src/lib/store/*"
+        "./src/store/*"
       ],
       "$event/*": [
-        "./src/lib/event/*"
+        "./src/event/*"
       ],
       "$events/*": [
-        "./src/lib/events/*"
+        "./src/events/*"
       ],
       "$utils/*": [
-        "./src/lib/utils/*"
+        "./src/utils/*"
       ],
       "$types/*": [
-        "./src/lib/types/*"
+        "./src/types/*"
       ],
       "$json/*": [
-        "./src/lib/json/*"
+        "./src/json/*"
       ],
       "$html/*": [
         "./public/html/*"

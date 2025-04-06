@@ -1,0 +1,10 @@
+---
+import Layout from '$layouts/Layout.astro';
+import BasicR3f from '$components/react/BasicR3f'; // named import
+---
+
+<Layout>
+    <main class="size-screen">
+        <BasicR3f client:only="react" />
+    </main>
+</Layout>
