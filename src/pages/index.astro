@@ -13,10 +13,10 @@ import Layout from '../layouts/Layout.astro';
 		document.querySelector('astro-heart')?.addEventListener('heart-click', e => {
 			console.log(typeof e);
 
-			if (e instanceof CustomEvent) {
-				console.log('하트 클릭됨!', e.detail.count);
-				return;
-			}
+			// if (e instanceof CustomEvent) {
+			// 	console.log('하트 클릭됨!', e.detail.count);
+			// 	return;
+			// }
 		});
 	});
 </script>

@@ -49,7 +49,6 @@ export class AstroHeart extends HTMLElement {
 
     attributeChangedCallback(attrName: string, oldVal: string | null, newVal: string | null) {
         if (oldVal !== newVal) {
-            console.log(newVal);
             switch (attrName) {
                 case 'data-type':
                     this.type = newVal || '';
