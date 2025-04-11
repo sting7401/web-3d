@@ -1,28 +1,25 @@
 {
-    "printWidth": 120,
-    "tabWidth": 4,
-    "useTabs": false,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "all",
-    "bracketSpacing": true,
-    "arrowParens": "always",
-    "proseWrap": "never",
-    "endOfLine": "auto",
-    "jsxBracketSameLine": false,
-    "jsxSingleQuote": false,
-    "vueIndentScriptAndStyle": false,
-    "requirePragma": false,
-    "insertPragma": false,
-    "quoteProps": "consistent",
-    "htmlWhitespaceSensitivity": "ignore",
-    "plugins": ["prettier-plugin-astro", "prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
-    "overrides": [
-        {
-            "files": "*.svelte",
-            "options": {
-                "parser": "svelte"
-            }
-        }
-    ]
+	"printWidth": 100,
+	"tabWidth": 4,
+	"useTabs": true,
+	"semi": true,
+	"singleQuote": true,
+	"trailingComma": "all",
+	"bracketSpacing": true,
+	"arrowParens": "avoid",
+	"proseWrap": "preserve",
+	"endOfLine": "auto",
+	"jsxBracketSameLine": true,
+	"jsxSingleQuote": true,
+	"vueIndentScriptAndStyle": true,
+	"requirePragma": true,
+	"insertPragma": false,
+	"plugins": ["prettier-plugin-astro","prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
+	"svelteStrictMode": true,
+	"svelteBracketNewLine": true,
+	"svelteAllowShorthand": false,
+	"pluginSearchDirs": ["."],
+	"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }],
+	"svelteSortOrder": "scripts-styles-options-markup",
+	"svelteIndentScriptAndStyle": false
 }

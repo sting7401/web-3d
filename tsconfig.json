@@ -1,94 +1,63 @@
 {
-  "compilerOptions": {
-    "module": "es2020",
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "target": "ESNEXT",
-    "experimentalDecorators": true,
-    "useDefineForClassFields": false,
-    "allowJs": true,
-    "checkJs": true,
-    "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true,
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "outDir": "./public",
-    "baseUrl": ".",
-    "paths": {
-      "$/*": [
-        "./src/*"
-      ],
-      "$*": [
-        "./src/*"
-      ],
-      "$images/*": [
-        "./static/images/*"
-      ],
-      "$css/*": [
-        "./src/css/*"
-      ],
-      "$common/*": [
-        "./src/js/common/*"
-      ],
-      "$components/*": [
-        "./src/components/*"
-      ],
-      "$state/*": [
-        "./src/state/*"
-      ],
-      "$store/*": [
-        "./src/store/*"
-      ],
-      "$event/*": [
-        "./src/event/*"
-      ],
-      "$events/*": [
-        "./src/events/*"
-      ],
-      "$utils/*": [
-        "./src/utils/*"
-      ],
-      "$types/*": [
-        "./src/types/*"
-      ],
-      "$json/*": [
-        "./src/json/*"
-      ],
-      "$html/*": [
-        "./public/html/*"
-      ],
-      "$astro/*": [
-        "./astro/*"
-      ],
-      "$layouts/*": [
-        "./src/layouts/*"
-      ],
-      "$pages/*": [
-        "./src/pages/*"
-      ],
-      "$publish/*": [
-        "./publish/*"
-      ]
-    },
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js"
-  },
-  "include": [
-    "src",
-    "src/**/*.js",
-    "src/**/*.svelte",
-    "src/**/*.jsx",
-    "src/**/*.tsx",
-    "src/**/*.ts",
-    "src/**/*.html,"
-  ]
+	"compilerOptions": {
+		"module": "es2020",
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"target": "ESNEXT",
+		"experimentalDecorators": true,
+		"useDefineForClassFields": false,
+		"allowJs": true,
+		"checkJs": true,
+		"moduleResolution": "bundler",
+		"allowSyntheticDefaultImports": true,
+		"allowImportingTsExtensions": true,
+		"isolatedModules": true,
+		"moduleDetection": "force",
+		"noEmit": true,
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"outDir": "./public",
+		"baseUrl": ".",
+		"plugins": [
+			{
+				"name": "@astrojs/ts-plugin"
+			}
+		],
+		"paths": {
+			"$/*": ["./src/*"],
+			"$*": ["./src/*"],
+			"$images/*": ["./static/images/*"],
+			"$css/*": ["./src/css/*"],
+			"$common/*": ["./src/js/common/*"],
+			"$components/*": ["./src/components/*"],
+			"$state/*": ["./src/state/*"],
+			"$store/*": ["./src/store/*"],
+			"$event/*": ["./src/event/*"],
+			"$events/*": ["./src/events/*"],
+			"$utils/*": ["./src/utils/*"],
+			"$types/*": ["./src/types/*"],
+			"$json/*": ["./src/json/*"],
+			"$html/*": ["./public/html/*"],
+			"$astro/*": ["./astro/*"],
+			"$layouts/*": ["./src/layouts/*"],
+			"$pages/*": ["./src/pages/*"],
+			"$publish/*": ["./publish/*"]
+		},
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js"
+	},
+	"extends": "astro/tsconfigs/base",
+	"include": [
+		"src",
+		"src/**/*.js",
+		"src/**/*.svelte",
+		"src/**/*.jsx",
+		"src/**/*.tsx",
+		"src/**/*.ts",
+		"src/**/*.html,",
+		".astro/types.d.ts",
+		"**/*"
+	],
+	"exclude": ["dist"]
 }
