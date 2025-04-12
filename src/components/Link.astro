@@ -1,0 +1,26 @@
+---
+const { href } = Astro.props;
+---
+
+---
+
+<a href={href} class='link'><slot /></a>
+
+<style>
+	.link {
+		color: inherit;
+		text-decoration: none;
+		font-weight: 600;
+	}
+	.link:hover {
+		text-decoration: underline;
+	}
+</style>
+
+<script>
+	const link = document.querySelector('.link');
+
+	link?.addEventListener('click', () => {
+		console.log('Link clicked!');
+	});
+</script>

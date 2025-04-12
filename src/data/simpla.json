@@ -1,0 +1,26 @@
+[
+	{
+		"validation": "email",
+		"code": "invalid_string",
+		"message": "Invalid email",
+		"path": ["email"]
+	},
+	{
+		"validation": "url",
+		"code": "invalid_string",
+		"message": "Invalid url",
+		"path": ["image"]
+	},
+	{
+		"validation": "ip",
+		"code": "invalid_string",
+		"message": "Invalid ip",
+		"path": ["ips", 0]
+	},
+	{
+		"validation": "ip",
+		"code": "invalid_string",
+		"message": "Invalid ip",
+		"path": ["ips", 1]
+	}
+]

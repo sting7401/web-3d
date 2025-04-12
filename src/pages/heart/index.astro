@@ -1,0 +1,22 @@
+---
+import Layout from '$layouts/Layout.astro';
+---
+
+<Layout>
+	<astro-heart data-type='default' data-count='0'> </astro-heart>
+</Layout>
+
+<script type='module'>
+	import '/src/components/';
+
+	window.addEventListener('DOMContentLoaded', () => {
+		document.querySelector('astro-heart')?.addEventListener('heart-click', e => {
+			console.log(typeof e);
+
+			// if (e instanceof CustomEvent) {
+			// 	console.log('하트 클릭됨!', e.detail.count);
+			// 	return;
+			// }
+		});
+	});
+</script>
