@@ -3,12 +3,16 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "npm-run-all -p pb:db astro:dev",
+    "astro:dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "build-and-preview": "npm-run-all -s build preview",
+    "astro": "astro",
+    "pb:db": "./pocketbase serve"
   },
   "dependencies": {
+    "@astrojs/db": "^0.14.11",
     "@astrojs/react": "^4.2.3",
     "@astrojs/solid-js": "^5.0.7",
     "@astrojs/svelte": "^7.0.9",
@@ -29,6 +33,7 @@
     "@types/react-dom": "^19.1.2",
     "@types/three": "^0.175.0",
     "astro": "^5.6.1",
+    "pocketbase": "^0.26.0",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "react": "^19.1.0",

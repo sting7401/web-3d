@@ -8,11 +8,13 @@ import svelte from '@astrojs/svelte';
 
 import solidJs from '@astrojs/solid-js';
 
+import db from '@astrojs/db';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
 
-  integrations: [react(), svelte(), solidJs()]
+  integrations: [react(), svelte(), solidJs(), db()]
 });

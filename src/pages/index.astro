@@ -1,5 +1,29 @@
 ---
 import Layout from '$layouts/Layout.astro';
+import PocketBase from 'pocketbase';
+
+const pb = new PocketBase('http://127.0.0.1:8090');
+
+// 서버에서 데이터를 미리 가져오기
+const resultList = await pb.collection('products').getList(1, 50, {
+	filter: 'someField1 != someField2', // 필드 이름과 조건 확인
+});
+
+const records = await pb.collection('products').getFullList({
+	sort: '-someField',
+});
+
+const record = await pb.collection('products').getFirstListItem('someField="test"', {
+	expand: 'relField1,relField2.subRelField',
+});
 ---
 
-<Layout />
+<Layout>
+	<h1>Product List</h1>
+	<ul>
+		{resultList.items.map(item => <li>{item.name}</li>)}
+	</ul>
+
+	<h2>First Record</h2>
+	<p>{record.name}</p>
+</Layout>
